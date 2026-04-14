@@ -1,0 +1,649 @@
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Mobile-first base styles applied */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;     /* Universal box sizing */
+}
+
+html {
+  scroll-behavior: smooth;    /* Enables smooth scrolling when users click internal page links */
+}
+
+/*  Base styles for typography, colors, and overall page background */
+
+body {
+  margin: 0;
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #000000;
+  background-color: #f3f0e9;
+}
+
+/* Makes images responsive */
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+ 
+/* Removes default underline styling from links */
+a {
+  text-decoration: none;
+}
+
+
+/* Centers the page content and restricts the maximum width for better readability */
+.wrapper {
+  width: min(100% - 1rem, 1200px);
+  margin-inline: auto;
+}
+
+/*  smaller container used for sections that require a narrower text width for better readability */
+.narrow {
+  max-width: 900px;
+}
+
+h1,
+h2,
+h3,
+nav a {
+  font-family: "Lato", sans-serif;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  line-height: 1.05;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 2.027rem;
+}
+
+h2 {
+  font-size: 1.802rem;
+}
+
+h3 {
+  font-size: 1.424rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+
+/* Accessibility feature that allows keyboard users to skip navigation and jump directly to the main content */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  z-index: 999;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.site-header {
+  background-color: #000000;
+  padding: 0.65rem 0 0.5rem;
+}
+
+.logo {
+  width: 120px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list a {
+  color: #ffffff;
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+  color: #d69e3d;
+}
+
+
+/*  The hero section uses a background image to create the main visual focus of the page */
+.hero {
+  background-image: url("../images/hero-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/* A dark overlay is applied to the hero section to improve text readability over the background image */
+.hero-content {
+  color: #ffffff;
+  text-align: center;
+  padding: 2.25rem 0;
+  animation: fadeUp 0.9s ease-out both;
+}
+
+.hero-content h1 {
+  margin-bottom: 0.7rem;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.48);
+  min-height: 285px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content p {
+  max-width: 19rem;
+  margin-inline: auto;
+  font-size: 0.73rem;
+  line-height: 1.45;
+  margin-bottom: 1rem;
+}
+
+.eyebrow {
+  color: #d69e3d;
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.35rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.3rem;
+  font-family: "Karla", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: translateY(-2px);
+}
+
+
+.btn-light:hover,
+.btn-light:focus {
+  background-color: #d69e3d;
+  color: #000000;
+}
+.btn-light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.btn-dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.btn-dark:hover,
+.btn-dark:focus {
+  background-color: #966f2c;
+  color: #ffffff;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  }
+
+.btn-outline:hover,
+.btn-outline:focus {
+  background: #ffffff;
+  color: #000000;
+}
+
+.section-light {
+  padding: 2rem 0;
+}
+
+.section-dark {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 2rem 0;
+}
+
+.welcome h2,
+.offer h2,
+.about h2,
+.testimonials h2,
+.promo-block h2 {
+  max-width: 12ch;
+}
+
+/*  Adds spacing between grid items using margin and gap for better layout structure */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.gallery-main {
+  grid-column: 1 / -1;
+}
+
+.gallery-grid img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.offer {
+  text-align: center;
+}
+.offer h2 {
+  text-align: center;
+  max-width: none;
+}
+.offer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.offer-grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.offer-icon {
+  width: 110px;
+  margin-bottom: 0.8rem;
+}
+
+.offer-card p {
+  max-width: 26ch;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+/* Background image section used to promote key areas such as the menu and locations */
+.promo-section {
+  background-image: url("../images/coffee-shop.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.promo-block {
+  position: relative;
+}
+
+.promo-overlay {
+  background: rgba(0, 0, 0, 0.48);
+  min-height: 170px;
+  display: flex;
+  align-items: center;
+}
+
+.promo-content {
+  color: #ffffff;
+  text-align: center;
+  padding: 1.75rem 0;
+}
+
+.promo-content h2 {
+  max-width: 14ch;
+  margin-inline: auto;
+  font-size: 1.55rem;
+}
+
+.about-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.about-image img {
+  min-height: 260px;
+  object-fit: cover;
+}
+
+.about-content p {
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+/* Grid layout used to display customer testimonial cards in an organized and responsive way */
+.testimonial-grid {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.testimonial-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-card img {
+  min-height: 250px;
+  object-fit: cover;
+}
+
+.testimonial-text {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 1rem 0.85rem;
+}
+
+.testimonial-text p {
+  font-size: 0.72rem;
+  line-height: 1.4;
+  margin-bottom: 0.4rem;
+}
+
+.testimonial-text span {
+  color: #d69e3d;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Simple footer styling with centered copyright text and minimal layout */
+.site-footer {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.7rem;
+}
+
+
+/* Keyframe animation creates smooth fade-up entrance effect */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet media query adjusts layout and typography for medium screens */ 
+@media (min-width: 768px) {
+  .wrapper {
+    width: min(100% - 2rem, 1200px);
+  }
+
+  h1 {
+    font-size: 2.986rem;
+  }
+
+  h2 {
+    font-size: 2.488rem;
+  }
+
+  h3 {
+    font-size: 1.728rem;
+  }
+
+  .header-inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+    /* Adjust logo sizing  */
+  .logo {
+    width: 150px;
+  }
+
+  .nav-list a {
+    font-size: 0.85rem;
+  }
+
+  .hero-overlay {
+    min-height: 560px;
+  }
+
+  .hero-content {
+    text-align: center;
+    padding: 4rem 0;
+  }
+
+  .hero-content p {
+    margin-inline: auto;
+  }
+
+   .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .about-content {
+    max-width: 480px;
+  }
+    /* Adjusts the layout for tablet screens to ensure better spacing, readability, and responsive design */
+   .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .testimonial-card img {
+    height: 360px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .testimonials h2 {
+    max-width: none;
+  }
+  /* grid adjustment for tablet size  */
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+
+  .offer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .promo-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .promo-overlay {
+    min-height: 320px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .gallery-main {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Desktop media query increases spacing and layout complexity */ 
+@media (min-width: 1100px) {
+  h1 {
+    font-size: 3.815rem;
+  }
+
+  h2 {
+    font-size: 3.052rem;
+  }
+
+  h3 {
+    font-size: 1.953rem;
+  }
+
+  .hero-overlay {
+    min-height: 720px;
+  }
+    /* Adjust hero content for desktop  */
+  .hero-content {
+    max-width: 700px;
+  }
+
+  .welcome.section-light {
+    padding-bottom: 2.5rem;
+  }
+
+  .offer.section-light {
+    padding-top: 1.5rem;
+  }
+
+  .gallery-grid {
+    margin-top: 1rem;
+  }
+
+  .offer-grid {
+    margin-top: 1.5rem;
+  }
+
+  .offer h2 {
+    text-align: center;
+    max-width: none;
+    margin-bottom: 1rem;
+  }
+
+  .offer .eyebrow {
+    text-align: center;
+    margin-bottom: 0.4rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .about-image img {
+    height: 420px;
+    width: 100%;
+    object-fit: cover;
+  }
+  /* adjust grid layout as per desktop mock up */
+  .testimonial-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .testimonial-card img {
+    height: 420px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .section-light,
+  .section-dark {
+    padding: 5rem 0;
+  }
+
+  .promo-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .promo-block {
+    display: flex;
+    align-items: center;
+  }
+
+  .promo-overlay {
+    width: 100%;
+    min-height: 400px;
+  }
+}

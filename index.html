@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Midterm Project</title>
+    <meta
+      name="description"
+      content="My Coffee House landing page featuring premium coffee, fair trade beans, and local baked goods."
+    />
+    <!-- fonts from google  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Lato:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!-- Skip link added for accessibility. -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Header section contains the logo and main navigation. -->
+    <header class="site-header">
+      <div class="wrapper header-inner">
+
+        <!--  Logo image -->
+        <a href="#" class="logo-link" aria-label="My Coffee House home">
+          <img
+            src="./images/my-coffee-shop-logo.svg"
+            alt="My Coffee House logo"
+            class="logo"
+          />
+        </a>
+        <!--  Main navigation for the site. -->
+        <nav aria-label="Primary navigation" class="main-nav">
+          <ul class="nav-list">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#locations">Locations</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    <main id="main-content">
+      <section class="hero">
+        <div class="hero-overlay">
+          <div class="wrapper hero-content">
+            <h1>Experience Coffee Like Never Before</h1>
+            <p>
+              We craft more than beverages; we create moments of connection,
+              comfort, and flavour in every cup. Discover the perfect brew for
+              your day.
+            </p>
+            <a href="#menu" class="btn btn-light">Explore Our Menu</a>
+          </div>
+        </div>
+      </section>
+      <!-- Welcome section  -->
+      <section class="welcome section-light">
+        <div class="wrapper">
+          <p class="eyebrow">Welcome to My Coffee House</p>
+          <h2>Experience a New Way to Taste Coffee</h2>
+
+          <div class="gallery-grid">
+            <img
+              src="./images/latte.jpeg"
+              alt="Close-up of milk being poured into a cup of coffee creating latte art"
+              class="gallery-main"
+            />
+            <img
+              src="./images/coffee-beans.jpeg"
+              alt="Roasted coffee beans in a tray"
+            />
+            <img
+              src="./images/pouring-coffee.jpeg"
+              alt="Fresh coffee being poured into a glass carafe"
+            />
+            <img
+              src="./images/three-cups.jpeg"
+              alt="Two people holding cups of coffee over a table"
+            />
+            <img
+              src="./images/smiling-employee.jpeg"
+              alt="Smiling customer holding a coffee cup inside the café"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- This section showcases the key offerings of the coffee shop,
+   such as fair trade coffee and freshly baked goods. -->
+      <section class="offer section-light" aria-labelledby="offer-heading">
+        <div class="wrapper narrow">
+          <p class="eyebrow">What We Offer</p>
+          <h2 id="offer-heading">Why Visit Us?</h2>
+
+          <div class="offer-grid">
+            <article class="offer-card">
+              <img
+                src="./images/fair-trade.svg"
+                alt=""
+                aria-hidden="true"
+                class="offer-icon"
+              />
+              <h3>Fair Trade Coffee</h3>
+              <p>
+                We build direct partnerships with farmers and source products
+                ethically in the development of delicious, sustainable coffee.
+              </p>
+            </article>
+            <!-- Added image for tie up business feedback from customer  -->
+            <article class="offer-card">
+              <img
+                src="./images/local-baked-goods.svg"
+                alt=""
+                aria-hidden="true"
+                class="offer-icon"
+              />
+              <h3>Local Baked Goods</h3>
+              <p>
+                We work with local bakeries and bring the valley’s finest baked
+                goods to complement every beverage.
+              </p>
+            </article>
+            <!-- VALUE PROPOSITION
+              This section highlights what makes the restaurant unique
+            and gives users reasons to visit, such as quality food,
+            fresh ingredients, and a welcoming experience -->
+            <article class="offer-card">
+              <img
+                src="./images/made-with-love.svg"
+                alt=""
+                aria-hidden="true"
+                class="offer-icon"
+              />
+              <h3>Made With Love</h3>
+              <p>
+                We value our customers and aim to make your visit memorable.
+                Every cup is prepared with care and attention.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+       <!-- PROMOTIONAL BLOCKS
+            These sections direct users to key pages such as the menu
+            and store locations, helping them navigate the site easily. -->
+      <section class="promo-section">
+        <div id="menu" class="promo-block">
+          <div class="promo-overlay">
+            <div class="wrapper promo-content">
+              <p class="eyebrow">Our Menu</p>
+              <h2>Explore What We Have to Offer You</h2>
+              <a href="#" class="btn btn-light">Explore Our Menu</a>
+            </div>
+          </div>
+        </div>
+        <!-- location section -->
+        <div id="locations" class="promo-block">
+          <div class="promo-overlay">
+            <div class="wrapper promo-content">
+              <p class="eyebrow">Locations</p>
+              <h2>Find Your Nearest Coffee Shop</h2>
+              <a href="#" class="btn btn-outline">View Locations</a>
+            </div>
+          </div>
+        </div>
+      </section>
+       <!-- Image for about us  -->
+      <section id="about" class="about section-light">
+        <div class="wrapper about-grid">
+          <div class="about-image">
+            <img
+              src="./images/about-us.jpeg"
+              alt="Baristas working behind the counter preparing coffee"
+            />
+          </div>
+          <!-- ABOUT SECTION
+            This section shares the story behind the coffee house
+            and highlights the brand’s values and purpose. -->
+          <div class="about-content">
+            <p class="eyebrow">About Us</p>
+            <h2>Read Our Story</h2>
+            <p>
+              In the heart of our community, My Coffee House was founded with a
+              simple idea: coffee should inspire connection and celebrate the
+              craft behind every cup. Since opening our doors, we’ve built a
+              warm and welcoming place for coffee lovers.
+            </p>
+            <p>
+              Our beans are carefully selected and roasted to create rich,
+              balanced flavours. From handcrafted espresso drinks to comforting
+              brewed coffee, every item is made to give you a memorable café
+              experience.
+            </p>
+            <a href="#" class="btn btn-dark">Learn More</a>
+          </div>
+        </div>
+      </section>
+      <!-- Testimonials display customer feedback to build trust and credibility. -->
+      <section
+        class="testimonials section-dark"
+        aria-labelledby="testimonials-heading"
+      >
+        <div class="wrapper">
+          <p class="eyebrow">Testimonials</p>
+          <h2 id="testimonials-heading">What Our Customers Say About Us</h2>
+            <!-- customer feedback 1 -->
+          <div class="testimonial-grid">
+            <article class="testimonial-card">
+              <img
+                src="./images/testimonial-1.jpeg"
+                alt="Customer enjoying a cup of coffee"
+              />
+              <div class="testimonial-text">
+                <p>
+                  “I always make a point to visit My Coffee Company when in
+                  Ottawa. Delicious coffee and friendly service.”
+                </p>
+                <span>Jane D, Toronto</span>
+              </div>
+            </article>
+            <!-- customer feedback 2 -->
+            <article class="testimonial-card">
+              <img
+                src="images/testimonial-2.jpeg"
+                alt="Smiling customer sitting in the coffee shop"
+              />
+              <div class="testimonial-text">
+                <p>
+                  “Great atmosphere and excellent coffee. This is my go-to spot
+                  whenever I want to relax or catch up with friends.”
+                </p>
+                <span>Scott W, Ottawa</span>
+              </div>
+            </article>
+            <!-- customer feedback 3 -->
+            <article class="testimonial-card">
+              <img
+                src="images/testimonial-3.jpeg"
+                alt="Customer smiling while holding a warm drink"
+              />
+              <div class="testimonial-text">
+                <p>
+                  “The baked treats are delicious and the coffee is always
+                  fresh. I love the cozy feeling every time I come here.”
+                </p>
+                <span>Susan F, Ottawa</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer contains basic site information and copyright details. -->
+    <footer class="site-footer">
+      <div class="wrapper">
+        <p>&copy; My Coffee Company 2024</p>
+      </div>
+    </footer>
+  </body>
+</html>
